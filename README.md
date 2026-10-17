@@ -1,3 +1,13 @@
+---
+title: VGSales NA Predictor
+emoji: 🎮
+colorFrom: blue
+colorTo: indigo
+sdk: docker
+app_port: 7860
+pinned: false
+---
+
 # Video Game Sales – NA_Sales Predictor
 API prediksi (Flask) + CI/CD (GitHub Actions) + monitoring (Prometheus/Grafana, drift check, uptime).
 
@@ -13,3 +23,8 @@ MAE 0.110 | MSE 0.133 | R² 0.772  (tanpa Global_Sales agar tidak ada data leaka
 
 ## Fitur yang wajib dikirim ke /predict
 Year_of_Release, EU_Sales, JP_Sales, Other_Sales, Platform, Genre, Publisher
+
+## Endpoint
+- `GET /health`  - cek status
+- `POST /predict` - prediksi
+- `GET /metrics` - metrik Prometheus
